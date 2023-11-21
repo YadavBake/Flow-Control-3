@@ -1,6 +1,6 @@
 
-															Flow-Control Part-3 || Selection Statements : switch
-														==========================================================
+												Flow-Control Part-3 || Selection Statements : switch
+											     ==========================================================
 
 -----------------------
    switch Statements	
@@ -11,11 +11,9 @@
  -> To handle these requirement we should go For switch statement.
  
  
-
-
-	Syntax								switch(x)												if(x==1) {								  
-	                                    {                                                       	System.out.println("JAN");           
-		switch(x)                       	case 1 :                                            }                                        
+	Syntax				   switch(x)								if(x==1) {								  
+	                                    {                                                       			System.out.println("JAN");           
+		switch(x)                       	case 1 :                                            		}                                        
 		{                               		 System.out.println("JAN");                     	else if (x==2){                      
 			case 1 :                    		 break;                                         		System.out.println("FAB");       
 				 Action-1;              	                                                    	}                                    
@@ -25,33 +23,33 @@
 				 Action-2;              		                                                	else if(x==4){                       
 				 break;                 	case 3 :                                            		System.out.println("APRIL");     
 				                        		 System.out.println("MAR");                     	}                                    
-			case n :                    		 break;                                                                                  
-				 Action-n;              															// Not recommanded
+			case n :                    		 break;                                                                            
+				 Action-n;              									// Not recommanded
 				 break;                 	case 12 :
 			                            		 System.out.println("DEC");
 			default :                   		 break;
 				default Action;         }
-		}									//recommanded
+		}						//recommanded
 		
 
   -> The allowed arguments type For the switch are byte,short,char,int until 1.4v version. But from 1.5v version onwords currsponding wrapper classes and enum type also allowed.
 
   -> From 1.7v version onwords String type also allowed.
 
-	----------------------------------------
-	|	1.4v 	|	1.5v		|	1.7v   |
-	|-----------|---------------|----------|	
+	-------------------------------------------
+	|	1.4v 	|	1.5v	|  1.7v    |
+	|---------------|---------------|----------|	
 	|	        |               |          |
-	|	byte 	|   Byte 		|	       |
-	|           |               |          |
-	|	short 	|	Short 		|		   |
-	|			|				|	String |
-	|	char 	|	Character   |          |
+	|	byte 	|   Byte 	|          | 
+	|           	|               |          |
+	|	short 	|  Short        |	   |
+	|		|		|   String |
+	|	char 	| Character     |          |
 	|	        |               |          |
-	|	int 	|	Integer     |          |
-	|           |               |          |
-	|			|	enum        |          |
-	----------------------------------------
+	|	int 	| Integer       |          |
+	|               |               |          |
+	|		| enum          |          |
+	--------------------------------------------
 
 	
 -> 	Curly braces are mandatory except switch every where curly braces are optional.   
@@ -115,8 +113,8 @@
 	Ex. 
 	
 	
-	byte b =10;											byte b =10;
-			|---->byte 											|=========> int 
+	byte b =10;					   byte b =10;
+		|---->byte 					    |=========> int 
 	switch(b){                                          switch(b+1){
 		                                                	
 		case 10:                                        	case 10:
@@ -129,11 +127,11 @@
 		                                                	  
 		case 1000:                                      	case 1000:  
           System.out.println(1000);                           System.out.println(1000);
-          break;                                              break;
-		//PLP found: int required byte   
-	}  													}
+          break;                                               break;
+		//PLP found: int required byte  
+		}  						}
 	
-	 // invalid 											valid 
+	 // invalid 							valid 
 	 
 	 
 -> Duplicate case labels are not allowed . Otherwise we will get compile time error 
@@ -166,7 +164,7 @@
 				|=> It should be constant expression 
 				|
 				|=> The value should be in the range of switch arguments types
-	case label  |
+	case label ========== > |
 				|=> Duplicate case labels are not allowed 
 				|
 				
@@ -203,11 +201,11 @@
 	    	System.out.println(0);
 	    	
 	 
-		case 1:										x = 0 				x = 1 
+		case 1:					x = 0 				x = 1 
 	    	System.out.println(1);                  
         	break;                                  0 ,1 				1
 		                                            
-		case 2:                                     x = 2				x = 3
+		case 2:                                 x = 2				x = 3
         	System.out.println(2);                  
         	                                        2 ,def				def 
 		
@@ -235,13 +233,14 @@
 	        	System.out.println(0);
 	        	break;
          
-        	case 1:										x = 0 				x = 1 
-            	System.out.println(1);                  
-														0 					1 2 
+        	case 1:					x = 0 				x = 1 
+            	System.out.println(1);           
+							0 				1 2 
         	                                            
-        	case 2:                                     x = 2				x = 3
+        	case 2:                                x = 2				x = 3
             	System.out.println(2);                  
-            	                                         2					def 0 
-        	
+            	                                         2				def 0 
         	
         }
+
+
