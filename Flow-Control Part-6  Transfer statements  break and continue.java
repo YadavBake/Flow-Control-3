@@ -1,6 +1,6 @@
 
-													Flow-Control Part-6 || Transfer statements : break and continue
-												======================================================================
+											Flow-Control Part-6 || Transfer statements : break and continue
+										    =====================================================================
  
  -----------------------
    Transfer statements	
@@ -18,14 +18,14 @@
 		3. Inside Labeled Blocks:- To Break block exicution based on some condition.
 	
 	
-		1. Inside switch :								2. Inside Loop:									3. Inside Labeled block:
+		1. Inside switch :				2. Inside Loop:					3. Inside Labeled block:
 		                                                                                                
 		int x = 0;                                  	for (int i = 0; i<10; i++)                      class Test {
 		switch(x) {                                 	{                                               	
-			case 0 :                                		if(i=5)                                     	public static void main(String args[]){
-				System.out.println("0");            			break;                                  		
-			case 1 :                                		System.out.println(i);                      		int x = 10;
-				System.out.println("1");            	}                                               		l1:
+			case 0 :                                     if(i=5)                                     	public static void main(String args[]){
+				System.out.println("0");           	break;                                  		
+			case 1 :                                	System.out.println(i);                      		int x = 10;
+				System.out.println("1");            	}                                               	l1:
 				break;                                                                                  		{
 			case 2 :                                                                                    			System.out.println("Being");
 				System.out.println("2");                                                                			if(x==10)
@@ -35,7 +35,7 @@
 		}                                                                                               		System.out.println("Hello");
 		                                                                                                	}
 		                                                                                                }
-		0/p: 0 1										o/p: 0,1,2,3,4									 o/P: being  Hello 
+		0/p: 0 1						o/p: 0,1,2,3,4					 o/P: being  Hello 
 
  -> These are the only places where we can use break statement If we are using any where Else we will get compile time error. Saying break outside switch or Loops.
 
@@ -63,7 +63,7 @@
 	for(int i =0; i<10; i++)
 	{
 		if(i % 2 == 0 )
-			continue;
+		continue;
 		System.out.println(i);
 	} o/p: 1,3,5,7,9
 		
@@ -108,15 +108,15 @@
 		
 -> 
 
-	l1:																break;							break l1;
-	for(int i = 0 ; i<3 ;i++)						                1--0
+	l1:								break;							break l1;
+	for(int i = 0 ; i<3 ;i++)					1--0
 	{                                                               2--0							no-o/p
 		for(int j = 0 ; j<3; j++)                                   2--1
-		{                                                           continue;						continue l1;
-			if(i==j);                                               0--1							1---0
-			break;                                                  0--2							2---0
-			System.out.println(i+"...."+j);                         1--0							2---1
-		}                                                           1--2
+		{                                                       continue;						continue l1;
+			if(i==j);                                       0--1							1---0
+			break;                                          0--2							2---0
+			System.out.println(i+"...."+j);                 1--0							2---1
+		}                                                       1--2
 	}                                                               2--0
 	                                                                2--1
 	
@@ -127,14 +127,14 @@
  ->    
 	
 	
-	int x = 0;									x= 0
-	do {										1 7	
-												2 8
-   |--->x++;									3 9
+	int x = 0;						x= 0
+	do {							1 7	
+								2 8
+   |--->x++;							3 9
    ^	System.out.println(x);					4 10
-   |	if(++x<5)								5 11
-   |		continue;---------------			6
-   ^	x++;					   | 			    
+   |	if(++x<5)						5 11
+   |		continue;-----------     			6
+   ^	x++;			   | 			    
    |	System.out.println(x);	   |==> continue control comes down 	
    ---}while(++x<10);<----------------					
 	
