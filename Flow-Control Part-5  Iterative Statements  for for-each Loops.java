@@ -1,6 +1,6 @@
 
-														Flow-Control Part-5 || Iterative Statements : for, for-each Loops
-													========================================================================
+										  Flow-Control Part-5 || Iterative Statements : for, for-each Loops
+										======================================================================
 
 ----------------
    for Loop 
@@ -10,15 +10,15 @@
  
  -> If we know number of iterations in advance then for loop is the best choice.
 
-					1					2,5,8<------------------4,7<------<<---------<<----
+					1      2,5,8<------------------4,7<------<<---------<<----
 		for (intialization_section ; Conditinal_check ; Increment|Decrement_section) {	  |	
-										|												  |
+						|						  |
 			//Loop Body 3,6,9-------------------------------------------------------------
 			
 		}
  
  
-					1	 2,5,8	  4,7
+		      1	        2,5,8	  4,7
 		for (int i = 0; i<10;	 i++){
 			
 			System.out.println("Hello"); 3,6
@@ -30,9 +30,9 @@
 	Ex.
 	
 	for(int i=0; true; i++)					for(int i=0; i<10; i++);	for(int i=0; i<=10; i++)
-		System.out.println("Hello");        	                        	int  x = 10;
+		System.out.println("Hello");        	                        	         int  x = 10;
 	
-	// valid										valid 					invlaid 
+	// valid						valid 					invlaid 
 	
 	
 	
@@ -96,13 +96,13 @@
 ->  All three part of for loop are independent of each other and optional. 
 
 
-	------------------------------------------------------------
-	|	for(; ;)							|	for( ; ;);     |
-	|	{                                   |                  |
-	|		System.out.println("Hell");     |                  |
-	|	}                                   |                  |
-	|                                       |                  |
-	------------------------------------------------------------
+	--------------------------------------------------------------
+	|	for(; ;)			    |	for( ; ;);   |
+	|	{                                   |                |
+	|		System.out.println("Hell"); |                |
+	|	}                                   |                |
+	|                                           |                |
+	--------------------------------------------------------------
 		Both are valid and Infinite loops also.
 		
 		
@@ -110,23 +110,23 @@
  Ex.
 
 																															int a = 10; b = 20;
-	for(int i= 0;  true; i++)				for(int i= 0;  false; i++)				for(int i= 0; ; i++)					for(int i= 0;  a<b; i++)
+	for(int i= 0;  true; i++)		for(int i= 0;  false; i++)		    for(int i= 0; ; i++)		    for(int i= 0;  a<b; i++)
 	{                                       {	                                    {                                       {
 		System.out.println("Hello");        	System.out.println("Hello");        	System.out.println("Hello");        	System.out.println("Hello");
 	}                                       }                                       }                                       }
 	System.out.println("Hi");               System.out.println("Hi");               System.out.println("Hi");               System.out.println("Hi");
-	//invalid 								invalid 								invalid									valid 
-	// unreachable statement				unreachable statement {					unreachable statement					Hello print infinite number of time 
+	//invalid 				invalid 				invalid					valid 
+	// unreachable statement		unreachable statement {			unreachable statement			Hello print infinite number of time 
 	
 
-	int a = 10; b = 20;						final int a = 10; b = 20;				final int a = 10; b = 20;
+    int a = 10; b = 20;			    final int a = 10; b = 20;		    final int a = 10; b = 20;
     for(int i= 0;  a>b; i++)                for(int i= 0;  a<b; i++)                for(int i= 0;  a>b; i++)
     {                                       {                                       {
     	System.out.println("Hello");        	System.out.println("Hello");        	System.out.println("Hello");
     }                                       }                                       }
     System.out.println("Hi");               System.out.println("Hi");               System.out.println("Hi");
-	//valid									// invalid 	 							invalid 
-    // Hi 									unreachable statement					unreachable statement {	
+    //valid				    // invalid 	 	   	 	    invalid 
+    // Hi 		 		    unreachable statement		   unreachable statement {	
 
 ---------------------------------------------
   for-each Loop | Enhanced for-looop (1.5v)
@@ -137,37 +137,37 @@
  -> It is specially designed loop to retrive elements of array and collections.
 
  Ex. To print elements of one-dimensional Arrays.
-																		--------------------
+														--------------------
 							int [] x = {10,20,30,40};			 x----> | 10 | 20 | 30| 40 |
-										|								--------------------
+								|						--------------------
 			-----------------------------------------------------------------
-			|																|
-			|																|
-      Normal for loop													for-each 
+			|							        |
+			|								|
+      Normal for loop								     for-each 
 	
-	for(int i = 0; i<xlength; i++){								for(x1 :x)										
-																{
-		System.out.println(x[i]);									System.out.println(x1)	
-	}															}
+	for(int i = 0; i<xlength; i++){						for(x1 :x)										
+										{
+		System.out.println(x[i]);					   System.out.println(x1)	
+	}									}
 
 
  Ex. To print elements of two dimensional array:
 																							
 																							
 										int[][] x = { { 10,20,30}, {40,50}};						
-															|																	   ------------														
-							-----------------------------------------------------------------								x----->|    |	  |														
-							|																|									    ------------												
-							|																|                              x1         |       |                                         
-					Normal for loop													  for-each loop 					----------------	------------						                                                                         
-																														|10	 |20  |  30 |	| 40 | 50  |		
-					for(int i = 0; i<xlength; i++){									for(int[]x1:x)						----------------	------------
-																					{
-							for(int j=0; j<x[i].lemgth; j++){						  for(int x2:x1)
-																						{
-								System.out.println(x[i][j]);								System.out.println(x2);
-							}																}
-					}																	}
+											  |							       ------------														
+							-----------------------------------------------------------------			x----->|    |	  |														
+							|								|			        ------------												
+							|								|                       x1         |       |                                         
+					Normal for loop								  for-each loop 	     ----------------	------------						                                                                         
+																	     |10 |20  |  30 |	| 40 | 50  |		
+					for(int i = 0; i<xlength; i++){					  for(int[]x1:x)		     ----------------	------------
+													   {
+							for(int j=0; j<x[i].lemgth; j++){		      for(int x2:x1)
+													       {
+								System.out.println(x[i][j]);			System.out.println(x2);
+							}							}
+					}								    }
 				
  
  
@@ -175,38 +175,39 @@
 		
 		Ex. 
 										
-												   ------------			
-											x----->|    |	  |										for(int [] [] x1:x) 
-													------------		                            {
-												x1  |       |                                       	for(int[]x2:x1)
-											-----------	------------                                	{
-								  ---------|	 |    | |    |     |-----------                     		for(int x3:x2)
-								  |		   ------------	------------          |                     		{
-							  x2  |			       |      |                   |                     			System.out.println(x3);
-							------------  ------------ ----------------	------------                		}
-		                    | 10 | 20  |  | 30 | 40  | |50	 |60  | 70|  | 80 | 90 |                	}
-                            ------------  ------------ ---------------- ------------                }
- 
+								       ------------			
+								x----->|    |	  |					for(int [] [] x1:x) 
+								       ------------		                            {
+								x1	|       |                                       	for(int[]x2:x1)
+								-----------	------------                                	{
+						      ---------|    |    | 	|    |     |-----------                     		for(int x3:x2)
+						      |		------------	------------          |                     		{
+					          x2  |		      |           |                   |                     			System.out.println(x3);
+				    		------------  ------------ ----------------  ------------                		}
+		                    		| 10 | 20  |  | 30 | 40  | |50	 |60  | 70|  | 80 | 90 |                	}
+                            			------------  ------------ ---------------- ------------                }
+
+
  -> for-each loop is the best choice to retrive elements of arrays and collections but it's a limitation is it is applicable only for and array's and collections and a it is not 
 	a general purpose loop.
 	
  
 		Ex. 
   
-		for(int i=0; i<10; i++){  |
+		for(int i=0; i<10; i++){      |
 			                      |
 			System.out.println(i);|==> we can't write equivalent for-each loop directly  
-		}                         | 
+		}                             | 
 		
  -> By using normal for-loop we can print array elements either in origenal order or in reverse order. But by using for-each loop we can print array elements in only in origenal
 	order but not in reverse order.
 
 	Ex. 
 	
-		int [] x = { 10,20,30,40,50};			|
-		                                        |
+		int [] x = { 10,20,30,40,50};	  	    |
+		                                            |
 			for(int i = x.length-1 ; i>=0;i--){ |==> we can't write equivalent for-each loop directly  
-				System.out.println(x[i]);       |
+				System.out.println(x[i]);   |
 			}                                   |
 			o/p; 50
 				 40
@@ -231,33 +232,33 @@
 	Ex. 
 																								
 	Syntax:                                                                                     				Iterable
-							|-------->// Array|Collection                                       				   |	
-		for(eachitem x : target ){                                                              				colletion 
-							|-------->//should be Iterable Object                               				    |
+				   |-------->// Array|Collection                                       				   |	
+		for(eachitem x : target ){                                                              			Colletion 
+				  |-------->//should be Iterable Object                               				    |
 			                                                                                       ---------------------------------	
-		}								// java.lang.Iterable(I) must implements these             |			|				   |
-                                                                                                List(I)		  Set(I)			Queue(I)
+		}		 // java.lang.Iterable(I) must implements these                                |		|	       |
+                                                                                                            List(I)	      Set(I)	    Queue(I)
 
 		
  -> Difference between iterator and interable.
  
  
-		-----------------------------------------------------------------------------------------------------
-		|				Iterator (I) 					  |					Iterable(I)						|
-		----------------------------------------------------------------------------------------------------|
-		|	1. It is releated to  collections 			  |	1. It is releated to for-each loop.             |
-		|	                                              |                                                 |
-		|	2. we can use to retrieve to the elements of  |	2. The target element in for-each loop should   |
-		|	   collections one by one.					  |		Iterable.                                   |
-		|	                                              |                                                 |
-		|	3. It is prasent in java.util package 		  |	3. It is prasent int java.lang package.         |
-		|	                                              |                                                 |
-		|	4. It containes 3 Method are there 			  |	4. It containes  1 method is.                   |
-		|		I. hasNext().							  |			I. iterator().	                        |
-		|	   II.next().                                 |                                                 |
-		|	  III. remove().	                          |                                                 |
-		|                                                 |                                                 |
-		-----------------------------------------------------------------------------------------------------
+		-------------------------------------------------------------------------------------------------------
+		|	 Iterator (I) 				     |		Iterable(I)	 		       |
+		-------------------------------------------------------------------------------------------------------| 
+		|	1. It is releated to  collections 	     |	1. It is releated to for-each loop.            |
+		|	                                             |                                                 |
+		|	2. we can use to retrieve to the elements of |	2. The target element in for-each loop should  |
+		|	   collections one by one.		     |		Iterable.                              |
+		|	                                             |                                                 |
+		|	3. It is prasent in java.util package 	     |	3. It is prasent int java.lang package.        |
+		|	                                             |                                                 |
+		|	4. It containes 3 Method are there 	     |	4. It containes  1 method is.                  |
+		|		I. hasNext().			     |			I. iterator().	               |
+		|	   II.next().                                |                                                 |
+		|	  III. remove().	                     |                                                 |
+		|                                                    |                                                 |
+		--------------------------------------------------------------------------------------------------------
 		
 	    
 
